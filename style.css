@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+#game {
+  width: 500px;
+  height: 200px;
+  border: 1px solid black;
+  margin: 50px auto;
+  overflow: hidden;
+}
+#character {
+  width: 20px;
+  height: 50px;
+  background-color: red;
+  position: relative;
+  top: 150px;
+}
+.jumping {
+  animation: jump 500ms;
+}
+.extrajumping {
+  animation: extrajump 500ms;
+}
+@keyframes jump {
+  0% {
+    top: 150px;
+  }
+  30% {
+    top: 100px;
+  }
+  70% {
+    top: 100px;
+  }
+  100% {
+    top: 150px;
+  }
+}
+@keyframes extrajump {
+  0% {
+    top: 100px;
+  }
+  30% {
+    top: 50px;
+  }
+  70% {
+    top: 50px;
+  }
+  100% {
+    top: 100px;
+  }
+}
+#block {
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  position: relative;
+  top: 130px;
+  left: 480px;
+  animation: block 1s infinite linear;
+  z-index: 1;
+}
+@keyframes block {
+  0% {
+    left: 480px;
+  }
+  100% {
+    left: -40px;
+  }
+}
+#block2 {
+  width: 20px;
+  height: 20px;
+  background-color: green;
+  position: relative;
+  top: 100px;
+  left: 500px;
+  z-index: 100;
+}
+.startblock {
+  animation: block2 1.5s infinite linear;
+}
+@keyframes block2 {
+  0% {
+    left: 480px;
+  }
+  100% {
+    left: -40px;
+  }
+}
+#score {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  text-align: center;
+  margin: auto;
+}
